@@ -45,7 +45,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       const { PDFParse } = await import("pdf-parse");
       const parser = new PDFParse(new TextEncoder().encode(rawText));
-      await parser.load();
       text = await parser.getText();
       parser.destroy();
     } catch (e: any) { console.warn("pdf-parse:", e.message); }
