@@ -241,3 +241,10 @@ If you encounter issues:
 ---
 
 **Built with ❤️ for job seekers who want to stand out!**
+## 二次开发说明
+本仓库为深度整合二创版本：
+1. 基础框架 Fork 原AutoATS上游仓库，遵循原MIT开源协议；
+2. 复用本人初代自研简历平台完整底层代码；
+3. 新增PDF中文渲染修复、拖拽排序、标题格式渲染、Cloudflare云端部署配置等自研功能。
+
+本项目仅个人非商用学习使用，不做付费盈利。
