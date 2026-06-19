@@ -42,19 +42,19 @@ export const HonorSchema = z.object({
 });
 
 export const ResumeParseResultSchema = z.object({
- personal: z.object({
-  name: z.string().default(""),
-  phone: z.string().default(""),
-  email: z.string().default(""),
-  location: z.string().default(""),
-  title: z.string().default(""),
-}).default(() => ({
-  name: "",
-  phone: "",
-  email: "",
-  location: "",
-  title: "",
-})),
+  personal: z.object({
+    name: z.string().default(""),
+    phone: z.string().default(""),
+    email: z.string().default(""),
+    location: z.string().default(""),
+    title: z.string().default(""),
+  }).default({
+    name: "",
+    phone: "",
+    email: "",
+    location: "",
+    title: "",
+  }),
   education: z.array(EducationSchema).default([]),
   experience: z.array(ExperienceSchema).default([]),
   projects: z.array(ProjectSchema).default([]),
@@ -137,5 +137,3 @@ export type OptimizedResume = z.infer<typeof OptimizedResumeSchema>;
 export type Education = z.infer<typeof EducationSchema>;
 export type Experience = z.infer<typeof ExperienceSchema>;
 export type Project = z.infer<typeof ProjectSchema>;
-export type Skill = z.infer<typeof SkillSchema>;
-export type Honor = z.infer<typeof HonorSchema>;
