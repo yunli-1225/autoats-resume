@@ -42,13 +42,13 @@ export const HonorSchema = z.object({
 });
 
 export const ResumeParseResultSchema = z.object({
-  personal: z.object({
-    name: z.string().default(""),
-    phone: z.string().default(""),
-    email: z.string().default(""),
-    location: z.string().default(""),
-    title: z.string().default(""),
-  }).default({}),
+ personal: z.object({
+  name: z.string().default(""),
+  phone: z.string().default(""),
+  email: z.string().default(""),
+  location: z.string().default(""),
+  title: z.string().default(""),
+}).default({}),
   education: z.array(EducationSchema).default([]),
   experience: z.array(ExperienceSchema).default([]),
   projects: z.array(ProjectSchema).default([]),
