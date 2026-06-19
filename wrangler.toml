@@ -6,3 +6,6 @@ pages_build_output_dir = ".vercel/output/static"
 
 [env.production]
 vars = { AI_PROVIDER = "deepseek" }
+
+# 强制使用 legacy-peer-deps 解决依赖冲突
+installCommand = "npm install --legacy-peer-deps"
