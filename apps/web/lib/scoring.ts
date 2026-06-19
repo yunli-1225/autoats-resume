@@ -272,7 +272,6 @@ export function calculateCultureMatch(
   const allText = [
     ...resume.experience.map((e) => e.description),
     ...resume.projects.map((p) => p.description),
-    resume.summary,
   ].join(" ");
 
   if (implicitRequirements.length === 0) {
